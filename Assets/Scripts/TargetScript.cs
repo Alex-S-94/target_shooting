@@ -13,10 +13,7 @@ public class TargetScript : MonoBehaviour
     private bool allowInput = true;
 
     [SerializeField]
-    //private float delay = 0.5F;
-    private int pointsInner = 5;
-    private int pointsMiddle = 3;
-    private int pointsOuter = 1;
+    private int pointsInner = 5, pointsMiddle = 3, pointsOuter = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -28,14 +25,7 @@ public class TargetScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if Target hit
-            //search for disc hit
-            //if inner disc hit -> AddScore(pointsInner)
-            //if middle disc hit -> AddScore(pointsMiddle)
-            //if outer disc hit -> AddScore(pointsOuter)
-            //destroy Target -> DestroyTarget(target) with animation
-            //after destroy -> call to Controller to spawn new Target
-        
+                
     }
 
     public void ClickFuntion (discs disc) {
@@ -75,7 +65,7 @@ public class TargetScript : MonoBehaviour
     void DestroyTarget()
     {
         Destroy(gameObject);
-        //delay would be nice, maybe some animation
+        //delay would be nice
         allowInput = true;
         targetSpawner.newTarget();
     }
